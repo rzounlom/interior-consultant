@@ -25,7 +25,6 @@ Container styles
   width: 100vw;
   max-height: 960;
   max-width: 1280;
-  border: 1px solid red;
   font-family: "Lora", serif;
   font-size: 14px;
   font-weight: 500;
@@ -113,25 +112,50 @@ Mobile nav styles
   width: 100vw;
   padding: 5%;
   background-color: black;
-  display: flex;
-
+  display: none;
   flex-direction: column;
+  animation-name: toggle-nav;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  display: hidden;
+}
+
+.show {
+  display: inherit;
+  display: flex;
+}
+
+@keyframes toggle-nav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.show {
+  display: inherit;
+  animation-name: toggle-nav;
 }
 
 .close {
   font-weight: 900;
   font-size: 1.2rem;
-  height: 10%;
-  border: 1px solid red;
+  height: 5%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
+.close:hover {
+  cursor: pointer;
+}
+
 .mobile-menu {
   margin-top: 35%;
   height: 40%;
-  border: 1px solid red;
+  font-size: 18px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

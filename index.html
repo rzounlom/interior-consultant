@@ -23,12 +23,14 @@
   <body>
     <div class="page">
       <div class="mobile-nav">
-        <div class="close"><i class="fa-solid fa-xmark fa-xl"></i></div>
+        <div class="close">
+          <i onclick="toggleMobileNav()" class="fa-solid fa-xmark fa-xl"></i>
+        </div>
         <ul class="mobile-menu">
-          <li>Home</li>
-          <li>Collection</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li onclick="toggleMobileNav()">Home</li>
+          <li onclick="toggleMobileNav()">Collection</li>
+          <li onclick="toggleMobileNav()">About</li>
+          <li onclick="toggleMobileNav()">Contact</li>
         </ul>
       </div>
       <nav>
@@ -39,7 +41,7 @@
           <li>About</li>
           <li>Contact</li>
         </ul>
-        <div class="hamburger">
+        <div class="hamburger" onclick="toggleMobileNav()">
           <i class="fa-solid fa-bars fa-xl"></i>
         </div>
       </nav>
@@ -49,5 +51,7 @@
         devChallenges.io
       </footer>
     </div>
+
+    <script src="./index.js"></script>
   </body>
 </html>
