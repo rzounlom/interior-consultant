@@ -31,6 +31,8 @@ Container styles
   color: white;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -173,6 +175,41 @@ header {
   display: flex;
   flex-direction: column;
   border: 1px solid red;
+  padding: 5%;
+}
+
+.details,
+.showcase {
+  height: 50%;
+  width: 100%;
+  max-width: 1920px;
+  max-height: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10% 15%;
+}
+
+.details > .heading {
+  font-size: 31px;
+  font-weight: 400;
+}
+
+.details > .text {
+  font-family: "Montserrat";
+}
+
+.details > .action {
+  font-size: 15px;
+  font-family: 700;
+  align-self: flex-start;
 }
 
 /* 
@@ -201,6 +238,13 @@ Media queries
 -------------
 */
 
+@media screen and (min-width: 540px) {
+  .details > .text,
+  .details > .action {
+    padding: 6% 5%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hamburger {
     display: none;
@@ -208,5 +252,44 @@ Media queries
 
   .menu {
     display: inherit;
+  }
+
+  .details > .text,
+  .details > .action {
+    padding: 0 25%;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .details,
+  .showcase {
+    height: 100%;
+    width: 50%;
+  }
+
+  .details {
+    padding: 12% 10%;
+  }
+
+  .details > .text,
+  .details > .action {
+    padding: 0 25%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .details {
+    padding: 18% 5%;
   }
 }
