@@ -11,7 +11,7 @@ Page reset
 }
 
 body {
-  background-color: black;
+  background: #181719;
 }
 
 /* 
@@ -111,13 +111,14 @@ Mobile nav styles
   height: 100vh;
   width: 100vw;
   padding: 5%;
-  background-color: black;
+  background: #181719;
   display: none;
   flex-direction: column;
   animation-name: toggle-nav;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
   display: hidden;
+  z-index: 100;
 }
 
 .show {
@@ -174,7 +175,6 @@ header {
   height: 80%;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   padding: 5%;
 }
 
@@ -182,12 +182,11 @@ header {
 .showcase {
   height: 50%;
   width: 100%;
-  max-width: 1920px;
-  max-height: 1280px;
+  max-width: 863px;
+  max-height: 581px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
 }
 
 .details {
@@ -212,6 +211,81 @@ header {
   align-self: flex-start;
 }
 
+.showcase {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.showcase {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.showcase > img {
+  width: 100%;
+  height: 75%;
+}
+
+.profile {
+  position: absolute;
+  max-height: 189px;
+  max-width: 410px;
+  height: 115px;
+  width: 270px;
+  align-self: flex-end;
+  background: #181719;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 5px 10px;
+}
+
+.profile > .designer,
+.profile > .designer-detials {
+  height: 50%;
+  width: 100%;
+}
+
+.profile > .designer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.profile > .designer > .designer-img {
+  padding: 2%;
+  height: 45px;
+  width: 45px;
+}
+
+.profile > .designer > .designer-img > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.profile > .designer > .designer-description {
+  margin-left: 2px;
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.profile > .designer > .designer-description p:nth-of-type(2) {
+  color: #828282;
+  font-size: 8px;
+}
+
+.profile > .designer-details {
+  display: flex;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
+
 /* 
 -------------
 Footer styles
@@ -221,7 +295,6 @@ Footer styles
 footer {
   width: 100%;
   height: 10%;
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -258,6 +331,21 @@ Media queries
   .details > .action {
     padding: 0 25%;
   }
+
+  .profile {
+    margin-left: 35%;
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (min-height: 1180px) {
+  .showcase > img {
+    height: 80%;
+  }
+
+  .profile {
+    margin-bottom: 3%;
+  }
 }
 
 @media screen and (min-width: 950px) {
@@ -290,6 +378,74 @@ Media queries
     justify-content: center;
   }
   .details {
-    padding: 18% 5%;
+    padding: 12% 5%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-height: 800px) {
+  .details {
+    padding: 8% 0%;
+  }
+
+  .showcase > img {
+    height: 85%;
+  }
+
+  .profile {
+    margin-left: 12%;
+    margin-bottom: 0%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .details {
+    padding: 8% 12%;
+  }
+
+  .details > .heading {
+    font-size: 30px;
+  }
+
+  .details > .text {
+    font-size: 15px;
+  }
+
+  .details > .action {
+    font-size: 13px;
+  }
+
+  .showcase > img {
+    height: 88%;
+  }
+
+  .profile {
+    margin-left: 25%;
+    margin-bottom: 0%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .details {
+    padding: 8% 9%;
+  }
+
+  .details > .heading {
+    font-size: 30px;
+  }
+
+  .details > .text {
+    font-size: 15px;
+  }
+
+  .details > .action {
+    font-size: 13px;
+  }
+
+  .showcase > img {
+    height: 85%;
+  }
+
+  .showcase > img {
+    height: 85%;
   }
 }
